@@ -1,0 +1,50 @@
+package lebk.appointment.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Teacher {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String Nachname;
+    private String description;
+    private String Vorname;
+
+    // Getters and setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNachname() {
+        return Nachname;
+    }
+
+    public void setNachname(String nachname) {
+        this.Nachname = nachname;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getVorname() {
+        return Vorname;
+    }
+
+    public void setVorname(String Vorname) {
+        this.Vorname = Vorname;
+    }
+}
