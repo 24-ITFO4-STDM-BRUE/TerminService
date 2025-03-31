@@ -1,8 +1,6 @@
 package lebk.appointment.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -14,6 +12,8 @@ public class Appointment {
     private String title;
     private String description;
     private LocalDateTime dateTime;
+
+    @ManyToOne private Teacher teacher;
 
     // Getters and setters
     public Long getId() {
@@ -46,5 +46,10 @@ public class Appointment {
 
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
+    }
+
+    public Teacher getTeacher() {return teacher;}
+
+    public void setTeacher(Teacher teacher) {this.teacher = teacher;
     }
 }
