@@ -2,6 +2,7 @@ package lebk.appointment.model;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 public class Appointment {
@@ -12,8 +13,9 @@ public class Appointment {
     private String title;
     private String description;
     private LocalDateTime dateTime;
-    @OneToMany
-    private Teacher[] teachers;
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name="teacher_id")
+    private List<Teacher> teachers;
 
     // Getters and setters
     public Long getId() {
@@ -48,11 +50,11 @@ public class Appointment {
         this.dateTime = dateTime;
     }
 
-    public Teacher[] getTeachers() {
+    public List<Teacher> getTeachers() {
         return teachers;
     }
 
-    public void setTeachers(Teacher[] teachers) {
+    public void setTeachers(List<Teacher> teachers) {
         this.teachers = teachers;
     }
 }

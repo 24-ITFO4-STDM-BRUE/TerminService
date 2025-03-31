@@ -10,8 +10,6 @@ public class Teacher {
     private String lastname;
     private String firstname;
     private String description;
-    @ManyToOne
-    private Appointment appointment;
 
     // Getters and setters
     public Long getId() {
@@ -44,13 +42,5 @@ public class Teacher {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Appointment getAppointment() {
-        return appointment;
-    }
-
-    public void setAppointment(Appointment appointment) {
-        this.appointment = appointment;
     }
 }
