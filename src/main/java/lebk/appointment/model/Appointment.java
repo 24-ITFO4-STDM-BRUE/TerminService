@@ -14,6 +14,7 @@ public class Appointment {
     private String title;
     private String description;
     private LocalDateTime dateTime;
+    private Teacher[] teachers;
 
     // Getters and setters
     public Long getId() {
@@ -46,5 +47,13 @@ public class Appointment {
 
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
+    }
+
+    public Teacher[] getTeachers() {
+        return teachers;
+    }
+
+    public void setTeachers(Teacher[] teachers) {
+        this.teachers = teachers;
     }
 }
