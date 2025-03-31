@@ -12,7 +12,9 @@ public class Appointment {
     private String title;
     private String description;
     private LocalDateTime dateTime;
-    ManyToOne Teacher;
+
+    @ManyToOne
+    private Teacher Teacher;
 
     // Getters and setters
     public Long getId() {

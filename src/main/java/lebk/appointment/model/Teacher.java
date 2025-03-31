@@ -9,7 +9,9 @@ public class Teacher {
     private String Nachname;
     private String Vorname;
     private String Beschreibung;
-    OneToMany Appointment;
+
+    @OneToMany
+    private Appointment Appointment;
 
     public String getNachname(){
         return Nachname;
