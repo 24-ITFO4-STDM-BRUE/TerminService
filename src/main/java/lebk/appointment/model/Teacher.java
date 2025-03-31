@@ -1,8 +1,5 @@
 package lebk.appointment.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Teacher {
@@ -13,6 +10,7 @@ public class Teacher {
     private String lastname;
     private String firstname;
     private String description;
+    @ManyToOne
     private Appointment appointment;
 
     // Getters and setters
