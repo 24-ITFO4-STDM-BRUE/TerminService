@@ -31,6 +31,7 @@ public class AppointmentService {
         appointment.setTitle(appointmentDetails.getTitle());
         appointment.setDescription(appointmentDetails.getDescription());
         appointment.setDateTime(appointmentDetails.getDateTime());
+        appointment.setTeacherID(appointmentDetails.getTeacherID());
         return appointmentRepository.save(appointment);
     }
 
