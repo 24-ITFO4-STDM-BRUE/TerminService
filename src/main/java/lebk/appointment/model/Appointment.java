@@ -46,6 +46,6 @@ public class Appointment {
         this.dateTime = dateTime;
     }
     @ManyToOne (cascade = CascadeType.ALL)
-    @JoinColumn (name = "tid", referencedColumnName = "tid")
+    @JoinColumn (name = "Tid", referencedColumnName = "Tid")
     private Teacher teacher;
 }

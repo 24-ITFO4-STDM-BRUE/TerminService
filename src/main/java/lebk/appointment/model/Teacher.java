@@ -11,15 +11,15 @@ public class Teacher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long tid;
+    private Long Tid;
     private String vorname;
     private String nachname;
     private  String beschreibung;
 
 
-    public Long getTId() {return tid; }
+    public Long getTId() {return Tid; }
 
-    public void setTId(Long tid) { this.tid= tid; }
+    public void setTId(Long tid) { this.Tid= tid; }
 
     public String getNachname() {return nachname; }
 
