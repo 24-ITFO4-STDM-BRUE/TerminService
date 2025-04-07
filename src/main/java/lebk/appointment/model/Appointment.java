@@ -12,7 +12,7 @@ public class Appointment {
     private String title;
     private String description;
     private LocalDateTime dateTime;
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "teacherID", referencedColumnName = "ID")
     private Teacher teacherID;
 
