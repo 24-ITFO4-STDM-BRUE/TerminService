@@ -1,8 +1,6 @@
 package lebk.appointment.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -47,4 +45,7 @@ public class Appointment {
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
     }
+    @ManyToOne (cascade = CascadeType.ALL)
+    @JoinColumn (name = "Tid", referencedColumnName = "Tid")
+    private Teacher teacher;
 }
